@@ -27,7 +27,7 @@ const CitySelector: React.FunctionComponent = () => {
         updateInput(dispatch, value);
     }, [value]);
 
-    const handleChange = e => {
+    const handleChange = (e: { target: { value: string } }) => {
         const { value } = e.target;
 
         setValue(value);

@@ -1,14 +1,14 @@
 const cors = "https://cors-anywhere.herokuapp.com/";
 const url = `${cors}https://www.metaweather.com/api/`;
 
-export const getWeather = async id => {
+export const getWeather = async (id: number) => {
     const data = await fetch(`${url}location/${id}/`);
     const json = await data.json();
 
     return json;
 };
 
-export const getWeatherByCityId = async value => {
+export const getWeatherByCityId = async (value: string) => {
     const data = await fetch(`${url}location/search/?query=${value}`);
     const json = await data.json();
 

@@ -5,7 +5,7 @@ interface IInputField {
     text?: string;
     id?: number;
     selected?: boolean;
-    handleClick?: (id, text) => void;
+    handleClick?: (id: number, text: string) => void;
 }
 
 const Button: React.FunctionComponent<IInputField> = ({
